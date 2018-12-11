@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons start>
+          <button ion-button icon-only (click)="goBack()" slot="start">
+              <ion-icon name="arrow-back"></ion-icon>
+          </button>
+      </ion-buttons>
+    <ion-title style="text-align:center;">{{article.titre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <img src="../../assets/icon/favicon.png"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{article.titre}}
+        </ion-card-title>
+      <p>
+        {{article.article}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <form (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-input [(ngModel)]="todo.comment" name="comment"></ion-input>
+      </ion-item>
+      <br>
+      <button ion-button type="submit" block>Publier</button>
+  </form>
+</ion-content>

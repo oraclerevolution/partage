@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic NewsApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let article of actualites" (click)="goTo(article)">
+    <img src="../../assets/icon/favicon.png"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{article.titre}}
+        </ion-card-title>
+      <p>
+        {{article.preview}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
